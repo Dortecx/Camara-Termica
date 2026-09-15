@@ -1,0 +1,20 @@
+# Arduino build output
+build/
+*.elf
+*.bin
+*.hex
+*.map
+*.eep
+*.lst
+
+# Editor and OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Processing local output
+processing/**/application.*
+processing/**/out/
