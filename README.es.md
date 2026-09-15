@@ -6,6 +6,13 @@ La Camara es un puente de cámara térmica ESP32 + GY-MCU90640 UART con un visor
 
 ## Cómo funciona
 
+```mermaid
+flowchart LR
+  Camera["GY-MCU90640\ncámara térmica"] -->|Cuadro UART\n0x5A 0x5A 0x02 0x06| ESP32["ESP32\nsketch Arduino"]
+  ESP32 -->|Paquete USB Serial\n0xAB 0xCD + 640 píxeles + ambiente| Processing["Visor Processing"]
+  Processing --> Display["Mapa térmico de escritorio\nmínima / máxima / promedio / ambiente"]
+```
+
 1. El módulo GY-MCU90640 envía datos de imagen térmica al ESP32 por UART.
 2. El sketch del ESP32 en `arduino/CamaraTermica/CamaraTermica.ino` interpreta cada cuadro y publica un paquete binario compacto por USB Serial.
 3. El sketch de Processing en `processing/CamaraTermica/CamaraTermica.pde` lee el flujo USB Serial, decodifica los paquetes y muestra la vista térmica en el escritorio.
