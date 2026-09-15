@@ -7,7 +7,7 @@ La Camara is an ESP32 + GY-MCU90640 UART thermal camera bridge with a Processing
 ## How it works
 
 ```mermaid
-flowchart LR
+flowchart TD
   Camera["GY-MCU90640\nthermal camera"] -->|UART frame\n0x5A 0x5A 0x02 0x06| ESP32["ESP32\nArduino sketch"]
   ESP32 -->|USB Serial packet\n0xAB 0xCD + 640 pixels + ambient| Processing["Processing viewer"]
   Processing --> Display["Desktop thermal map\nmin / max / average / ambient"]

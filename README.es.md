@@ -7,7 +7,7 @@ La Camara es un puente de cámara térmica ESP32 + GY-MCU90640 UART con un visor
 ## Cómo funciona
 
 ```mermaid
-flowchart LR
+flowchart TD
   Camera["GY-MCU90640\ncámara térmica"] -->|Cuadro UART\n0x5A 0x5A 0x02 0x06| ESP32["ESP32\nsketch Arduino"]
   ESP32 -->|Paquete USB Serial\n0xAB 0xCD + 640 píxeles + ambiente| Processing["Visor Processing"]
   Processing --> Display["Mapa térmico de escritorio\nmínima / máxima / promedio / ambiente"]
