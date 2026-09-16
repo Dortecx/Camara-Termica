@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="430" viewBox="0 0 900 430" role="img" aria-labelledby="title desc">
+  <title id="title">ESP32 to GY-MCU90640 UART wiring</title>
+  <desc id="desc">Connection diagram showing GY-MCU90640 TX to ESP32 GPIO16 RX2, GY-MCU90640 RX to ESP32 GPIO17 TX2, common ground, and module-rated VCC.</desc>
+  <defs>
+    <style>
+      .bg { fill: #0f172a; }
+      .card { fill: #111827; stroke: #94a3b8; stroke-width: 2; rx: 18; }
+      .title { fill: #f8fafc; font: 700 24px sans-serif; }
+      .subtitle { fill: #cbd5e1; font: 15px sans-serif; }
+      .pin { fill: #1f2937; stroke: #64748b; stroke-width: 1.5; rx: 8; }
+      .pintext { fill: #e5e7eb; font: 600 16px monospace; }
+      .note { fill: #cbd5e1; font: 14px sans-serif; }
+      .wire-rx { stroke: #38bdf8; stroke-width: 5; fill: none; marker-end: url(#arrowBlue); }
+      .wire-tx { stroke: #fb7185; stroke-width: 5; fill: none; marker-end: url(#arrowRed); }
+      .wire-gnd { stroke: #a3a3a3; stroke-width: 5; fill: none; }
+      .wire-vcc { stroke: #facc15; stroke-width: 5; fill: none; }
+      .label { fill: #f8fafc; font: 700 15px sans-serif; }
+    </style>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#38bdf8" />
+    </marker>
+    <marker id="arrowRed" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#fb7185" />
+    </marker>
+  </defs>
+
+  <rect class="bg" width="900" height="430" />
+  <text class="title" x="450" y="42" text-anchor="middle">Thermal camera wiring used in this project</text>
+  <text class="subtitle" x="450" y="68" text-anchor="middle">Pins can be changed in the Arduino sketch if your ESP32 board needs a different UART mapping.</text>
+
+  <rect class="card" x="70" y="105" width="300" height="250" />
+  <text class="title" x="220" y="145" text-anchor="middle">GY-MCU90640</text>
+  <text class="subtitle" x="220" y="170" text-anchor="middle">UART thermal camera</text>
+
+  <rect class="pin" x="240" y="195" width="90" height="32" />
+  <text class="pintext" x="285" y="217" text-anchor="middle">TX</text>
+  <rect class="pin" x="240" y="240" width="90" height="32" />
+  <text class="pintext" x="285" y="262" text-anchor="middle">RX</text>
+  <rect class="pin" x="240" y="285" width="90" height="32" />
+  <text class="pintext" x="285" y="307" text-anchor="middle">GND</text>
+  <rect class="pin" x="240" y="330" width="90" height="32" />
+  <text class="pintext" x="285" y="352" text-anchor="middle">VCC</text>
+
+  <rect class="card" x="530" y="105" width="300" height="250" />
+  <text class="title" x="680" y="145" text-anchor="middle">ESP32</text>
+  <text class="subtitle" x="680" y="170" text-anchor="middle">Arduino bridge</text>
+
+  <rect class="pin" x="570" y="195" width="130" height="32" />
+  <text class="pintext" x="635" y="217" text-anchor="middle">GPIO16 RX2</text>
+  <rect class="pin" x="570" y="240" width="130" height="32" />
+  <text class="pintext" x="635" y="262" text-anchor="middle">GPIO17 TX2</text>
+  <rect class="pin" x="570" y="285" width="130" height="32" />
+  <text class="pintext" x="635" y="307" text-anchor="middle">GND</text>
+  <rect class="pin" x="570" y="330" width="130" height="32" />
+  <text class="pintext" x="635" y="352" text-anchor="middle">3V3 / rated</text>
+
+  <path class="wire-rx" d="M330 211 C420 211 480 211 570 211" />
+  <text class="label" x="450" y="202" text-anchor="middle">sensor TX → ESP32 RX</text>
+
+  <path class="wire-tx" d="M570 256 C480 256 420 256 330 256" />
+  <text class="label" x="450" y="247" text-anchor="middle">ESP32 TX → sensor RX</text>
+
+  <path class="wire-gnd" d="M330 301 C420 301 480 301 570 301" />
+  <text class="label" x="450" y="292" text-anchor="middle">common ground</text>
+
+  <path class="wire-vcc" d="M330 346 C420 346 480 346 570 346" />
+  <text class="label" x="450" y="337" text-anchor="middle">module-rated supply</text>
+
+  <text class="note" x="450" y="395" text-anchor="middle">Default code constants: SENSOR_RX_PIN = 16, SENSOR_TX_PIN = 17</text>
+</svg>

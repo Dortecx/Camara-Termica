@@ -39,6 +39,10 @@ docs/
 - Módulo de cámara térmica GY-MCU90640 con salida UART
 - Cable USB hacia la computadora que ejecuta Processing
 
+![Diagrama de conexión entre ESP32 y GY-MCU90640](docs/wiring-diagram.svg)
+
+Este diagrama muestra los pines usados en este proyecto: TX del sensor a GPIO16/RX2 del ESP32 y RX del sensor a GPIO17/TX2 del ESP32. Puedes cambiar esos pines en `arduino/CamaraTermica/CamaraTermica.ino` si tu placa ESP32 o tu cableado usa otra asignación UART.
+
 Consulta [docs/hardware.md](docs/hardware.md) y [docs/wiring.md](docs/wiring.md).
 
 ## Inicio rápido

@@ -39,6 +39,10 @@ docs/
 - GY-MCU90640 thermal camera module with UART output
 - USB cable to the computer running Processing
 
+![ESP32 to GY-MCU90640 wiring diagram](docs/wiring-diagram.svg)
+
+This diagram shows the pins used in this project: sensor TX to ESP32 GPIO16/RX2 and sensor RX to ESP32 GPIO17/TX2. You can change those pins in `arduino/CamaraTermica/CamaraTermica.ino` if your ESP32 board or wiring uses a different UART mapping.
+
 See [docs/hardware.md](docs/hardware.md) and [docs/wiring.md](docs/wiring.md).
 
 ## Quick start
