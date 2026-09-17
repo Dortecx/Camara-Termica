@@ -60,7 +60,7 @@ El visor imprime los puertos serial disponibles en la consola de Processing. Si 
 
 El visor en Processing está incluido en `processing/CamaraTermica/CamaraTermica.pde`, con su recurso de fuente en `processing/CamaraTermica/data/`.
 
-Para ejecutarlo, instala Processing, abre el archivo PDE, conecta el ESP32 que ejecuta `arduino/CamaraTermica/CamaraTermica.ino` y presiona Run. El sketch usa la biblioteca Serial integrada a `115200` baudios.
+Para ejecutarlo, instala [Processing](https://processing.org/download), abre el archivo PDE, conecta el ESP32 que ejecuta `arduino/CamaraTermica/CamaraTermica.ino` y presiona Run. El sketch usa la biblioteca Serial integrada a `115200` baudios.
 
 ## Licencia
 

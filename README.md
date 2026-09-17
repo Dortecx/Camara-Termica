@@ -60,7 +60,7 @@ The viewer prints available serial ports in the Processing console. If there are
 
 The Processing viewer is included at `processing/CamaraTermica/CamaraTermica.pde`, with its font asset under `processing/CamaraTermica/data/`.
 
-To run it, install Processing, open the PDE file, connect the ESP32 running `arduino/CamaraTermica/CamaraTermica.ino`, and press Run. The sketch uses the built-in Serial library at `115200` baud.
+To run it, install [Processing](https://processing.org/download), open the PDE file, connect the ESP32 running `arduino/CamaraTermica/CamaraTermica.ino`, and press Run. The sketch uses the built-in Serial library at `115200` baud.
 
 ## License
 

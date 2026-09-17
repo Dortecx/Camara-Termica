@@ -16,7 +16,7 @@ The bridge sketch is `arduino/CamaraTermica/CamaraTermica.ino`.
 
 ## Processing dependency
 
-Install Processing and open `processing/CamaraTermica/CamaraTermica.pde`. The viewer uses Processing's built-in Serial library.
+Install [Processing](https://processing.org/download) and open `processing/CamaraTermica/CamaraTermica.pde`. The viewer uses Processing's built-in Serial library.
 
 ## Handling note
 
