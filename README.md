@@ -51,16 +51,17 @@ See [docs/hardware.md](docs/hardware.md) and [docs/wiring.md](docs/wiring.md).
 2. Select an ESP32 board and install ESP32 board support if needed.
 3. Wire the GY-MCU90640 UART module to ESP32 GPIO16/GPIO17.
 4. Upload the sketch.
-5. Open `processing/CamaraTermica/CamaraTermica.pde` in Processing.
-6. Run the viewer and connect it to the ESP32 USB serial port at `115200` baud.
+5. Close Arduino IDE, or at least close its Serial Monitor/Serial Plotter, so it releases the ESP32 COM port.
+6. Open `processing/CamaraTermica/CamaraTermica.pde` in Processing.
+7. Run the viewer and connect it to the ESP32 USB serial port at `115200` baud.
 
-The viewer prints available serial ports in the Processing console. If there are multiple ports, set `SERIAL_PORT_INDEX` or `SERIAL_PORT_NAME` near the top of `CamaraTermica.pde` and run it again.
+The Processing viewer needs exclusive access to the serial port. If Arduino IDE or another serial monitor is still using the same COM port, Processing will fail to open it. The viewer prints available serial ports in the Processing console. If there are multiple ports, set `SERIAL_PORT_INDEX` or `SERIAL_PORT_NAME` near the top of `CamaraTermica.pde` and run it again.
 
 ## Processing viewer
 
 The Processing viewer is included at `processing/CamaraTermica/CamaraTermica.pde`, with its font asset under `processing/CamaraTermica/data/`.
 
-To run it, install [Processing](https://processing.org/download), open the PDE file, connect the ESP32 running `arduino/CamaraTermica/CamaraTermica.ino`, and press Run. The sketch uses the built-in Serial library at `115200` baud.
+To run it, install [Processing](https://processing.org/download), open the PDE file, connect the ESP32 running `arduino/CamaraTermica/CamaraTermica.ino`, close Arduino's Serial Monitor/Serial Plotter if it is open, and press Run. The sketch uses the built-in Serial library at `115200` baud.
 
 ## License
 

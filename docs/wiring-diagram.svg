@@ -31,7 +31,7 @@
   <text class="title" x="490" y="48" text-anchor="middle">Thermal camera wiring used in this project</text>
   <text class="subtitle" x="490" y="78" text-anchor="middle">GPIO16/GPIO17 are the pins used here. You can change them in the Arduino sketch.</text>
 
-  <rect class="card" x="70" y="120" width="300" height="280" rx="18" />
+  <rect class="card" x="70" y="120" width="300" height="305" rx="18" />
   <text class="device" x="220" y="160" text-anchor="middle">GY-MCU90640</text>
   <text class="deviceSub" x="220" y="188" text-anchor="middle">UART thermal camera</text>
 
@@ -44,7 +44,7 @@
   <rect class="pin" x="245" y="370" width="90" height="34" rx="8" />
   <text class="pintext" x="290" y="392" text-anchor="middle">VCC</text>
 
-  <rect class="card" x="610" y="120" width="300" height="280" rx="18" />
+  <rect class="card" x="610" y="120" width="300" height="305" rx="18" />
   <text class="device" x="760" y="160" text-anchor="middle">ESP32</text>
   <text class="deviceSub" x="760" y="188" text-anchor="middle">Arduino bridge</text>
 
@@ -55,7 +55,7 @@
   <rect class="pin" x="645" y="320" width="145" height="34" rx="8" />
   <text class="pintext" x="717" y="342" text-anchor="middle">GND</text>
   <rect class="pin" x="645" y="370" width="145" height="34" rx="8" />
-  <text class="pintext" x="717" y="392" text-anchor="middle">VCC / 3V3*</text>
+  <text class="pintext" x="717" y="392" text-anchor="middle">VCC / 3.3V*</text>
 
   <path class="wire-rx" d="M335 237 H645" />
   <rect class="labelBox" x="405" y="207" width="170" height="24" rx="6" />

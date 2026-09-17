@@ -18,6 +18,8 @@ The bridge sketch is `arduino/CamaraTermica/CamaraTermica.ino`.
 
 Install [Processing](https://processing.org/download) and open `processing/CamaraTermica/CamaraTermica.pde`. The viewer uses Processing's built-in Serial library.
 
+After uploading the Arduino sketch, close Arduino IDE or at least close its Serial Monitor/Serial Plotter before running Processing. Only one program can use the ESP32 COM/serial port at a time.
+
 ## Handling note
 
 Power the sensor only within its rated supply range and share ground between the sensor module and ESP32. Disconnect power before changing wiring.

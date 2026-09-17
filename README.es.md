@@ -51,16 +51,17 @@ Consulta [docs/hardware.md](docs/hardware.md) y [docs/wiring.md](docs/wiring.md)
 2. Selecciona una placa ESP32 e instala el soporte para ESP32 si hace falta.
 3. Conecta el módulo GY-MCU90640 UART a los GPIO16/GPIO17 del ESP32.
 4. Carga el sketch.
-5. Abre `processing/CamaraTermica/CamaraTermica.pde` en Processing.
-6. Ejecuta el visor y conéctalo al puerto USB serial del ESP32 a `115200` baudios.
+5. Cierra Arduino IDE, o al menos cierra su Monitor Serial/Serial Plotter, para liberar el puerto COM del ESP32.
+6. Abre `processing/CamaraTermica/CamaraTermica.pde` en Processing.
+7. Ejecuta el visor y conéctalo al puerto USB serial del ESP32 a `115200` baudios.
 
-El visor imprime los puertos serial disponibles en la consola de Processing. Si hay varios puertos, configura `SERIAL_PORT_INDEX` o `SERIAL_PORT_NAME` cerca del inicio de `CamaraTermica.pde` y ejecútalo de nuevo.
+El visor de Processing necesita acceso exclusivo al puerto serial. Si Arduino IDE u otro monitor serial sigue usando el mismo puerto COM, Processing no podrá abrirlo. El visor imprime los puertos serial disponibles en la consola de Processing. Si hay varios puertos, configura `SERIAL_PORT_INDEX` o `SERIAL_PORT_NAME` cerca del inicio de `CamaraTermica.pde` y ejecútalo de nuevo.
 
 ## Visor en Processing
 
 El visor en Processing está incluido en `processing/CamaraTermica/CamaraTermica.pde`, con su recurso de fuente en `processing/CamaraTermica/data/`.
 
-Para ejecutarlo, instala [Processing](https://processing.org/download), abre el archivo PDE, conecta el ESP32 que ejecuta `arduino/CamaraTermica/CamaraTermica.ino` y presiona Run. El sketch usa la biblioteca Serial integrada a `115200` baudios.
+Para ejecutarlo, instala [Processing](https://processing.org/download), abre el archivo PDE, conecta el ESP32 que ejecuta `arduino/CamaraTermica/CamaraTermica.ino`, cierra el Monitor Serial/Serial Plotter de Arduino si está abierto y presiona Run. El sketch usa la biblioteca Serial integrada a `115200` baudios.
 
 ## Licencia
 
